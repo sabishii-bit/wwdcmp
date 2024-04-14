@@ -2,10 +2,10 @@ INIT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/init.o
 
 EXTAB_O_FILES :=                                    \
-    $(OBJ_DIR)/asm/extab.o
+    $(OBJ_DIR)/asm/extab_.o
 
 EXTABINDEX_O_FILES :=                               \
-    $(OBJ_DIR)/asm/extabindex.o
+    $(OBJ_DIR)/asm/extabindex_.o
 
 TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/text.o
