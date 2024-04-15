@@ -4,7 +4,7 @@ This repository contains a WIP decompilation project of Wario World (US) for the
 
 ## Progress
 
-Current focus is getting Docker environmental issues sorted out such that the disassembly can be re-assembled properly back into the main.dol binary. Windows and WSL have proven to be problematic for this purpose. Going to be tested on personal Arch Linux installation going forward.
+Project disassembly can be successfully re-assembled using the following build instructions. Running Docker container on WSL has proven to be problematic; using Docker on a dedicated Linux installation is preferred method.
 
 ## Building
 ### Requirements
