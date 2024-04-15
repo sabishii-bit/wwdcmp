@@ -116,6 +116,7 @@ setup:
 	fi
 	@mkdir -p build
 	@chmod -R +x tools/
+	@echo "Finished adjusting."
 
 
 ALL_DIRS := $(OBJ_DIR) $(addprefix $(OBJ_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
