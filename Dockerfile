@@ -28,9 +28,6 @@ RUN mkdir /wwdcmp
 WORKDIR /wwdcmp
 COPY . /wwdcmp
 
-# Make sure all tools are executable
-RUN chmod -R +x /wwdcmp/tools/
-
 # Use non-root user
 USER user
 

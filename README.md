@@ -4,7 +4,7 @@ This repository contains a WIP decompilation project of Wario World (US) for the
 
 ## Progress
 
-Project disassembly can be successfully re-assembled using the following build instructions. Running Docker container on WSL has proven to be problematic; using Docker on a dedicated Linux installation is preferred method.
+Project disassembly can be successfully re-assembled using the following build instructions. Running Docker container on WSL has proven to be problematic; using Docker on a dedicated Linux installation is preferred method for building if you prefer using Docker over Makefile method.
 
 ## Building
 ### Requirements
@@ -17,7 +17,8 @@ Project disassembly can be successfully re-assembled using the following build i
 ### Instructions
 
 #### Makefile
-* Navigate to the root project directory and run `make` in Linux or WSL.
+1. Extract the downloaded `mwcc_compiler` folder from the zip archive into `tools/mwcc_compiler`.
+2. Navigate to the root project directory and run `make` in Linux or WSL.
 
 #### Docker
 1. Extract the downloaded `mwcc_compiler` folder from the zip archive into `tools/mwcc_compiler`.
