@@ -26,12 +26,10 @@ RUN useradd --create-home user && \
 # Setup working directory
 RUN mkdir /wwdcmp
 WORKDIR /wwdcmp
-
-# Assuming your project files are copied here, including executable
 COPY . /wwdcmp
 
-# Make sure the executable is executable
-RUN chmod +x /wwdcmp/tools/dtk/dtk-windows-x86_64.exe
+# Make sure all tools are executable
+RUN chmod -R +x /wwdcmp/tools/
 
 # Use non-root user
 USER user
