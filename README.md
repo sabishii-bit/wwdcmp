@@ -11,9 +11,15 @@ Current focus is getting Docker environmental issues sorted out such that the di
 * Metrowerks CodeWarrior 2.0 and 2.7 compiler for embedded PowerPC (`mwcceppc.exe` and `mwldeppc.exe`)
   * Follow instructions [here](https://pastebin.com/raw/CmeG2iDP).
 * Docker
+* Python
+* Wine
 
 ### Instructions
 
+#### Makefile
+* Navigate to the root project directory and run `make` in Linux or WSL.
+
+#### Docker
 1. Extract the downloaded `mwcc_compiler` folder from the zip archive into `tools/mwcc_compiler`.
 2. Build the Docker image: `docker build . -t wwdcmp`
 3. Compile: `docker run -v $(pwd):wwdcmp wwdcmp make --jobs`

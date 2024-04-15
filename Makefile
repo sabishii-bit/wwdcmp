@@ -9,7 +9,7 @@ ifneq ($(findstring microsoft,$(shell uname -a)),)
 endif
 
 # If 0, tells the console to chill out. (Quiets the make process.)
-VERBOSE ?= 0
+VERBOSE ?= 1
 
 # If GENERATE_MAP set to 1, tells LDFLAGS to generate a mapfile, which makes linking take several minutes.
 GENERATE_MAP ?= 0
@@ -100,7 +100,23 @@ DTK := $(firstword $(wildcard tools/dtk/*))
 
 default: all
 
-all: $(DOL)
+all: setup $(DOL)
+
+# Setting up conditions for building.
+setup:
+	@echo "Adjusting project to handle build requirements..."
+	@if [ -f tools/mwcc_compiler/2.0/lmgr326b.dll ]; then \
+	    mv tools/mwcc_compiler/2.0/lmgr326b.dll tools/mwcc_compiler/2.0/LMGR326B.dll; \
+	fi
+	@if [ -f tools/mwcc_compiler/2.7/lmgr326b.dll ]; then \
+	    mv tools/mwcc_compiler/2.7/lmgr326b.dll tools/mwcc_compiler/2.7/LMGR326B.dll; \
+	fi
+	@if [ -d build/ ]; then \
+	    rm -rf build/; \
+	fi
+	@mkdir -p build
+	@chmod -R +x tools/
+
 
 ALL_DIRS := $(OBJ_DIR) $(addprefix $(OBJ_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
 
