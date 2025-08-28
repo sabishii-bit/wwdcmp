@@ -1,0 +1,5 @@
+# <section>  <vaddr_start>  <vaddr_end>   <output .o>
+.text    0x80003100  0x80100000  build/objs/whole_text.o
+.data    0x80300000  0x80308000  build/objs/whole_data.o
+.rodata  0x80308000  0x80310000  build/objs/whole_rodata.o
+.bss     0x80310000  0x80320000  build/objs/whole_bss.o

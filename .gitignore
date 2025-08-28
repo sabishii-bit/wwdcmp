@@ -5,6 +5,7 @@ tools/mwcc_compiler/*
 !tools/mwcc_compiler/README.md
 tools/dtk/dtk*
 build/
+/objdiff.jsons
 obj/*
 *.asm
 *.exe
@@ -21,6 +22,8 @@ obj/*
 *.til
 *.o
 *.cp
+*build.ninja
+*objdiff.json
 .vscode
 
 # Allow
